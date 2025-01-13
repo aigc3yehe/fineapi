@@ -9,6 +9,10 @@ import Features2 from './assets/features2.svg'
 import Features3 from './assets/features3.svg'
 import Features4 from './assets/features4.svg'
 import Features5 from './assets/features5.svg'
+import Logo from './assets/logo.svg'
+import SmallX from './assets/small_x.svg'
+import SmallDiscord from './assets/small_discord.svg'
+
 import {
   MainLayout,
   ContentSection,
@@ -64,7 +68,15 @@ import {
   FeatureIcon,
   FeatureContent,
   FeatureCardTitle,
-  FeatureCardText
+  FeatureCardText,
+  FooterContent,
+  FooterLeft,
+  FooterLogo,
+  FooterTitle,
+  FooterRight,
+  FooterButton,
+  FooterButtonIcon,
+  FooterButtonText
 } from './styles/layouts'
 import CircleSvg from './assets/circle.svg'
 import RightArrow from './assets/right.svg'
@@ -139,12 +151,14 @@ function App() {
                   borderWidth: '1px',
                 }
               }}
+              onClick={() => window.open('https://x.com/the_AIGC_DAO', '_blank')}
             >
               <img src={XIcon} alt="X" style={{ width: '24px', height: '24px' }} />
             </IconButton>
 
             <IconButton
               sx={{
+                display: 'none',
                 width: '56px',
                 height: '56px',
                 borderRadius: '8px',
@@ -396,7 +410,23 @@ function App() {
 
       <ContentSection bgColor="#1D1D1B">
         <Footer>
-          {/* 页脚内容 */}
+          <FooterContent>
+            <FooterLeft>
+              <FooterLogo src={Logo} alt="AIGC DAO Logo" />
+              <FooterTitle>AIGC DAO</FooterTitle>
+            </FooterLeft>
+            
+            <FooterRight>
+              <FooterButton onClick={() => window.open('https://x.com/the_AIGC_DAO', '_blank')}>
+                <FooterButtonIcon src={SmallX} alt="Twitter" />
+                <FooterButtonText>Twitter</FooterButtonText>
+              </FooterButton>
+              <FooterButton sx={{ display: 'none' }}>
+                <FooterButtonIcon src={SmallDiscord} alt="Discord" />
+                <FooterButtonText>Discord</FooterButtonText>
+              </FooterButton>
+            </FooterRight>
+          </FooterContent>
         </Footer>
       </ContentSection>
     </MainLayout>

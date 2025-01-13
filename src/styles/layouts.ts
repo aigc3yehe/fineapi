@@ -444,8 +444,8 @@ export const LineImage = styled('img')({
 
 export const LearnMoreGroup = styled('div')({
   position: 'absolute',
-  bottom: '24px',
-  left: '311px',
+  top: '46px',
+  left: '0px',
   display: 'flex',
   alignItems: 'center',
   gap: '4px',
@@ -572,6 +572,7 @@ export const FeatureCardTitle = styled('h3')({
   textDecorationSkipInk: 'none',
   color: '#FFFFFF',
   margin: 0,
+  marginRight: '24px',
 })
 
 export const FeatureCardText = styled('p')({
@@ -584,4 +585,78 @@ export const FeatureCardText = styled('p')({
   textDecorationSkipInk: 'none',
   color: 'rgba(255, 255, 255, 0.6)',
   margin: 0,
+})
+
+export const FooterContent = styled('div')({
+  width: '708px',
+  height: '144px',
+  borderRadius: '16px',
+  background: '#CDF138',
+  margin: '46px auto',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+})
+
+export const FooterLeft = styled('div')({
+  height: '96px',
+  marginLeft: '40px',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '24px',
+})
+
+export const FooterLogo = styled('img')({
+  width: '80px',
+  height: '96px',
+})
+
+export const FooterTitle = styled('h2')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '48px',
+  fontWeight: 700,
+  lineHeight: '48px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#000000',
+  margin: 0,
+})
+
+export const FooterRight = styled('div')({
+  height: '32px',
+  marginRight: '24px',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '16px',
+})
+
+export const FooterButton = styled('button')({
+  height: '32px',
+  padding: '6px',
+  gap: '4px',
+  border: '1px solid rgba(0, 0, 0, 0.2)',
+  background: 'transparent',
+  display: 'flex',
+  alignItems: 'center',
+  cursor: 'pointer',
+  '&:hover': {
+    background: 'rgba(0, 0, 0, 0.05)',
+  },
+})
+
+export const FooterButtonIcon = styled('img')({
+  width: '20px',
+  height: '20px',
+})
+
+export const FooterButtonText = styled('span')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '16px',
+  fontWeight: 500,
+  lineHeight: '19.2px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#000000',
 })
