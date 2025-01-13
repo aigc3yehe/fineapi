@@ -176,7 +176,7 @@ export const SectionTwo = styled(ContentContainer)(({ theme }) => ( {
 export const SectionThree = styled(ContentContainer)(({ theme }) => ({
   height: '745px',
   [theme.breakpoints.down('sm')]: {
-    height: 'auto',
+    height: '745px',
     paddingBottom: '16px',
   }
 }))
@@ -608,69 +608,84 @@ export const FeatureItem = styled('div')(({ theme }) => ({
     height: '4px',
     backgroundColor: '#000000',
     marginTop: '8px',  // 调整圆点的垂直位置，使其与文本对齐
+    flexShrink: 0,  // 防止圆点被压缩
   },
   [theme.breakpoints.down('sm')]: {
     fontSize: '16px',
     lineHeight: '19.2px',
+    '&::before': {
+      marginTop: '7px',  // 微调移动端下圆点的垂直位置
+      width: '3px',  // 稍微调小圆点尺寸
+      height: '3px',
+    }
   }
 }))
 
 export const SectionThreeContent = styled('div')(({ theme }) => ({
   padding: '60px 80px',
   display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
+  justifyContent: 'center',
   [theme.breakpoints.down('sm')]: {
-    padding: '16px',
+    padding: '0px 0px',
     flexDirection: 'column',
+    alignItems: 'center',
+    position: 'relative',
   }
 }))
 
-export const LeftContent = styled('div')({
+export const LeftContent = styled('div')(({ theme }) => ({
   width: '583px',
   height: '523px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  }
+}))
 
-export const TextGroup = styled('div')({
+export const TextGroup = styled('div')(({ theme }) => ({
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   gap: '6px',
-})
+  [theme.breakpoints.down('sm')]: {
+    gap: '6px',
+    position: 'absolute',
+    top: '34px',
+    left: '14px',
+  }
+}))
 
-export const AgentsTitle = styled('h2')({
-  fontFamily: 'PP Neue Montreal',
-  fontSize: '88px',
-  fontWeight: 500,
-  lineHeight: '105.6px',
-  textAlign: 'left',
-  textUnderlinePosition: 'from-font',
-  textDecorationSkipInk: 'none',
-  margin: 0,
-})
+export const RightContent = styled('div')(({ theme }) => ({
+  width: '697px',
+  height: '607px',
+  position: 'relative',
+  [theme.breakpoints.down('sm')]: {
+    width: 'calc(100% - 20px)',
+    height: '325px',
+    position: 'absolute',
+    top: '145px',
+    left: '10px',
+  }
+}))
 
-export const AgentsDescription = styled('p')({
-  fontFamily: 'PP Neue Montreal',
-  fontSize: '20px',
-  fontWeight: 400,
-  lineHeight: '24px',
-  textAlign: 'left',
-  textUnderlinePosition: 'from-font',
-  textDecorationSkipInk: 'none',
-  margin: 0,
-  width: '550px',
-})
-
-export const BottomSection = styled('div')({
+export const BottomSection = styled('div')(({ theme }) => ({
   width: '565px',
   height: '251px',
   position: 'relative',
-})
+  [theme.breakpoints.down('sm')]: {
+    position: 'absolute',
+    top: '477px',
+    left: '14px',
+    width: '100%',
+    height: 'auto',
+  }
+}))
 
-export const MeetText = styled('p')({
+export const MeetText = styled('p')(({ theme }) => ({
   position: 'absolute',
   top: 0,
   left: '311px',
@@ -682,17 +697,29 @@ export const MeetText = styled('p')({
   textUnderlinePosition: 'from-font',
   textDecorationSkipInk: 'none',
   margin: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '14px',
+    lineHeight: '16.8px',
+    textAlign: 'right',
+    left: '220px',
+  }
+}))
 
-export const LineImage = styled('img')({
+export const LineImage = styled('img')(({ theme }) => ({
   position: 'absolute',
   top: '30px',
   left: '311px',
   width: '59px',
   height: '82px',
-})
+  [theme.breakpoints.down('sm')]: {
+    top: '26px',
+    left: '220px',
+    width: '49px',
+    height: '68px',
+  }
+}))
 
-export const LearnMoreGroup = styled('div')({
+export const LearnMoreGroup = styled('div')(({ theme }) => ({
   position: 'absolute',
   top: '46px',
   left: '0px',
@@ -700,9 +727,13 @@ export const LearnMoreGroup = styled('div')({
   alignItems: 'center',
   gap: '4px',
   cursor: 'pointer',
-})
+  [theme.breakpoints.down('sm')]: {
+    top: '80px',
+    left: '0px',
+  }
+}))
 
-export const LearnMoreText = styled('span')({
+export const LearnMoreText = styled('span')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '16px',
   fontWeight: 400,
@@ -710,9 +741,13 @@ export const LearnMoreText = styled('span')({
   textAlign: 'left',
   textUnderlinePosition: 'from-font',
   textDecorationSkipInk: 'none',
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '14px',
+    lineHeight: '16.8px',
+  }
+}))
 
-export const MisatoImage = styled('div')({
+export const MisatoImage = styled('div')(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
   left: 0,
@@ -724,29 +759,39 @@ export const MisatoImage = styled('div')({
   '&:hover': {
     backgroundImage: 'url("/misato.png")',
   },
-})
+  [theme.breakpoints.down('sm')]: {
+    top: '110px',
+    left: '0px',
+    width: '234px',
+    height: '147px',
+  }
+}))
 
-export const RightContent = styled('div')({
-  width: '697px',
-  height: '607px',
-  position: 'relative',
-})
-
-export const BoyImage = styled('img')({
+export const BoyImage = styled('img')(({ theme }) => ({
   position: 'absolute',
   bottom: 0,
   left: 0,
   width: '385px',
   height: '471px',
-})
+  [theme.breakpoints.down('sm')]: {
+    position: 'absolute',
+    width: '206px',
+    height: '252px',
+  }
+}))
 
-export const GirlImage = styled('img')({
+export const GirlImage = styled('img')(({ theme }) => ({
   position: 'absolute',
   top: 0,
   right: 0,
   width: '385px',
   height: '471px',
-})
+  [theme.breakpoints.down('sm')]: {
+    position: 'absolute',
+    width: '206px',
+    height: '252px',
+  }
+}))
 
 export const FeaturesTitle = styled('div')({
   width: '915px',
@@ -910,3 +955,34 @@ export const FooterButtonText = styled('span')({
   textDecorationSkipInk: 'none',
   color: '#000000',
 })
+
+export const AgentsTitle = styled('h2')(({ theme }) => ({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '88px',
+  fontWeight: 500,
+  lineHeight: '105.6px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  margin: 0,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '36px',
+    lineHeight: '43.2px',
+  }
+}))
+
+export const AgentsDescription = styled('p')(({ theme }) => ({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '20px',
+  fontWeight: 400,
+  lineHeight: '24px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  margin: 0,
+  width: '90%',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '16px',
+    lineHeight: '19.2px',
+  }
+}))
