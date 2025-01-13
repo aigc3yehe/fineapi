@@ -29,7 +29,15 @@ import {
   AnimatedHeartIcon,
   AnimatedHeartBackgroundIcon,
   AnimatedHeartOutInIcon,
-  RightIconContainer
+  RightIconContainer,
+  YellowPanel,
+  BackgroundImage,
+  PurpleUnion,
+  TextContainer,
+  CoreTitle,
+  SubTitle,
+  FeatureList,
+  FeatureItem
 } from './styles/layouts'
 import CircleSvg from './assets/circle.svg'
 import RightArrow from './assets/right.svg'
@@ -39,6 +47,8 @@ import WHeart from './assets/wheart.svg'
 import MovieSvg from './assets/movie.svg'
 import MiSvg from './assets/mi.svg'
 import SmileSvg from './assets/smile.svg'
+import GreenBackground from './assets/green_background.svg'
+import PurpleUnionIcon from './assets/purple_union.svg'
 
 function App() {
   return (
@@ -225,14 +235,42 @@ function App() {
                 transform="rotate(-9.09deg)"
               />
             </ImageShowcase>
-            {/* 后续的其他元素将在这里添加 */}
           </SectionOneContent>
         </SectionOne>
       </ContentSection>
 
       <ContentSection bgColor="#000000">
         <SectionTwo>
-          {/* 第二个模块的内容 */}
+          <YellowPanel>
+            <BackgroundImage src={GreenBackground} alt="green background" />
+            <PurpleUnion src={PurpleUnionIcon} alt="purple union" />
+            
+            <TextContainer>
+              <CoreTitle>CORE PRODUCTS</CoreTitle>
+              <SubTitle>
+                Introducing innovative agent-driven AIGC solutions powered by an open-source framework designed for agents.
+              </SubTitle>
+            </TextContainer>
+
+            <FeatureList>
+              <FeatureItem>
+                
+                Content Generation: Supports the creation of images, text, and complex AI models+
+              </FeatureItem>
+              <FeatureItem>
+                
+                Model Fine-Tuning: With VAE-like technology, AIGC Framework lowers the barrier to fine-tuning, giving small teams capabilities comparable to large enterprises+
+              </FeatureItem>
+              <FeatureItem>
+                
+                Open-Source Toolchain: Available to community developers, fostering collaboration and innovation+
+              </FeatureItem>
+              <FeatureItem>
+                
+                Seamless Trading Integration: Generated content can be directly linked to the 7007 Protocol for on-chain transactions.
+              </FeatureItem>
+            </FeatureList>
+          </YellowPanel>
         </SectionTwo>
       </ContentSection>
 

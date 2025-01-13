@@ -278,3 +278,93 @@ export const ShowcaseImage = styled('img')<{ centerX: number; centerY: number, t
     }
   })
 )
+
+export const YellowPanel = styled('div')({
+  width: '1280px',
+  height: '481px',
+  borderRadius: '16px',
+  position: 'relative',
+  margin: '68px auto',
+  background: '#FAF9F6',
+})
+
+export const BackgroundImage = styled('img')({
+  width: '1280px',
+  height: '481px',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  borderRadius: '16px',
+})
+
+export const PurpleUnion = styled('img')({
+  position: 'absolute',
+  width: '208px',
+  height: '208px',
+  top: '48px',
+  right: '48px',
+})
+
+export const TextContainer = styled('div')({
+  position: 'absolute',
+  top: '48px',
+  left: '48px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '12px',
+})
+
+export const CoreTitle = styled('h2')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '88px',
+  fontWeight: 500,
+  lineHeight: '92px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#000000',
+  margin: 0,
+})
+
+export const SubTitle = styled('p')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '19.2px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#000000',
+  margin: 0,
+})
+
+export const FeatureList = styled('div')({
+  position: 'absolute',
+  top: '231px',
+  left: '48px',
+  width: '931px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '18px',
+})
+
+export const FeatureItem = styled('div')({
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: '8px',
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '18px',
+  fontWeight: 400,
+  lineHeight: '21.6px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#000000',
+  '&::before': {
+    content: '""',
+    width: '4px',
+    height: '4px',
+    backgroundColor: '#000000',
+    marginTop: '8px',  // 调整圆点的垂直位置，使其与文本对齐
+  }
+})
