@@ -158,25 +158,45 @@ export const ContentContainer = styled('div')(({ theme }) => ({
   }
 }))
 
-export const SectionOne = styled(ContentContainer)({
+export const SectionOne = styled(ContentContainer)(({ theme }) => ({
   height: '989px',
-})
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    paddingBottom: '16px',
+  }
+}))
 
-export const SectionTwo = styled(ContentContainer)({
+export const SectionTwo = styled(ContentContainer)(({ theme }) => ( {
   height: '617px',
-})
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    paddingBottom: '16px',
+  }
+}))
 
-export const SectionThree = styled(ContentContainer)({
+export const SectionThree = styled(ContentContainer)(({ theme }) => ({
   height: '745px',
-})
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    paddingBottom: '16px',
+  }
+}))
 
-export const SectionFour = styled(ContentContainer)({
+export const SectionFour = styled(ContentContainer)(({ theme }) => ({
   height: '1013px',
-})
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    paddingBottom: '16px',
+  }
+}))
 
-export const Footer = styled(ContentContainer)({
+export const Footer = styled(ContentContainer)(({ theme }) => ({
   height: '235px',
-})
+  [theme.breakpoints.down('sm')]: {
+    height: 'auto',
+    paddingBottom: '16px',
+  }
+}))
 
 export const SectionOneContent = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -185,16 +205,15 @@ export const SectionOneContent = styled('div')(({ theme }) => ({
   marginTop: '33px',
   gap: '26px',
   [theme.breakpoints.down('sm')]: {
-    marginTop: '20px',
-    gap: '16px',
-    padding: '0 16px',
+    marginTop: '21px',
+    gap: '2.28px',
   }
 }))
 
-export const BuildButton = styled(Button)({
+export const BuildButton = styled(Button)(({ theme }) => ({
   width: '304px',
   height: '52px',
-  padding: '14px 20px',
+  padding: 0,
   gap: '10px',
   borderRadius: '52px',
   border: '1px solid rgba(0, 0, 0, 0.14)',
@@ -210,8 +229,18 @@ export const BuildButton = styled(Button)({
   textDecorationSkipInk: 'none',
   '&:hover': {
     background: 'transparent',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '204px',
+    height: '27px',
+    padding: 0,
+    fontSize: '16px',
+    lineHeight: '19.2px',
+    border: '0.3px solid rgba(0, 0, 0, 0.14)',
+    borderRadius: '14px',
+    marginBottom: '14px',
   }
-})
+}))
 
 export const SectionContent = styled('div')({
     display: 'flex',
@@ -228,7 +257,6 @@ export const HeadlineContainer = styled('div')<{ gap?: string }>(
     gap: gap,
     [theme.breakpoints.down('sm')]: {
       height: 'auto',
-      flexWrap: 'wrap',
       justifyContent: 'center',
       gap: '8px',
     }
@@ -246,28 +274,31 @@ export const HeadlineText = styled('h1')(({ theme }) => ({
   textTransform: 'uppercase',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '32px',
-    lineHeight: '38px',
-    width: '100%',
+    fontSize: '20px',
+    lineHeight: '24.85px',
     textAlign: 'center',
   }
 }))
 
-export const CircleIcon = styled('img')({
+export const CircleIcon = styled('img')(({ theme }) => ({
   width: '68px',
   height: '68px',
   animation: `${rotate} 450ms ease-out infinite`,
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '19.2px',
+    height: '19.2px',
+  }
+}))
 
 export const IconGroup = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '14px',
   [theme.breakpoints.down('sm')]: {
-    gap: '8px',
+    gap: '4.85px',
     '& img': {
-      width: '32px !important',
-      height: '32px !important',
+      width: '21.09px !important',
+      height: '21.09px !important',
     }
   }
 }))
@@ -289,43 +320,63 @@ const fadeOutIn = keyframes`
   }
 `
 
-export const HeartIconContainer = styled('div')({
+export const HeartIconContainer = styled('div')(({ theme }) => ({
   position: 'relative',
   width: '67px',
   height: '63px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '19px !important',
+    height: '18px !important',
+  }
+}))
 
-export const AnimatedHeartBackgroundIcon = styled('img')({
+export const AnimatedHeartBackgroundIcon = styled('img')(({ theme }) => ({
   position: 'absolute',
   width: '67px',
   height: '63px',
   top: 0,
   left: 0,
   zIndex: 1,
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '19px !important',
+    height: '18px !important',
+  }
+}))
 
-export const AnimatedHeartIcon = styled('img')<{ times: number }>(({ times=400 }) => ({
+export const AnimatedHeartIcon = styled('img')<{ times: number }>(({ times=400, theme }) => ({
   position: 'absolute',
   width: '67px',
   height: '63px',
   top: 0,
   left: 0,
   animation: `${fadeInOut} ${times}ms ease-out infinite`,
+  [theme.breakpoints.down('sm')]: {
+    width: '19px !important',
+    height: '18px !important',
+  }
 }))
 
-export const AnimatedHeartOutInIcon = styled('img')<{ times: number }>(({ times=400 }) => ({
+export const AnimatedHeartOutInIcon = styled('img')<{ times: number }>(({ times=400, theme }) => ({
   position: 'absolute',
   width: '67px',
   height: '63px',
   top: 0,
   left: 0,
   animation: `${fadeOutIn} ${times}ms ease-out infinite`,
+  [theme.breakpoints.down('sm')]: {
+    width: '19px !important',
+    height: '18px !important',
+  }
 }))
 
-export const HeartIcon = styled('img')({
+export const HeartIcon = styled('img')(({ theme }) => ({
   width: '67px',
   height: '63px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '19px !important',
+    height: '18px !important',
+  }
+}))
 
 export const RightIcon = styled('img')(({ theme }) => ({
   width: '173px',
@@ -334,8 +385,8 @@ export const RightIcon = styled('img')(({ theme }) => ({
   position: 'absolute',
   left: 0,
   [theme.breakpoints.down('sm')]: {
-    width: '86px',
-    height: '34px',
+    width: '49px !important',
+    height: '18px !important',
   }
 }))
 
@@ -345,50 +396,80 @@ export const RightIconContainer = styled('div')(({ theme }) => ({
   overflow: 'hidden',
   position: 'relative',
   [theme.breakpoints.down('sm')]: {
-    width: '86px',
-    height: '34px',
+    width: '49px !important',
+    height: '18px !important',
+    '& img': {
+      width: '49px !important',
+      height: '18px !important',
+    }
   }
 }))
 
-export const HeartContainer = styled('div')({
+export const HeartContainer = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   height: '63px',
   gap: '28px',
-})
+  [theme.breakpoints.down('sm')]: {
+    gap: '8px',
+    height: '25px'
+  }
+}))
 
 export const EyesIcon = styled('img')({
   width: '74px',
   height: '74px',
 })
 
-export const MovieIcon = styled('img')({
+export const MovieIcon = styled('img')(({ theme }) => ({
   width: '71px',
   height: '68px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '20.03px !important',
+    height: '19.2px !important',
+  }
+}))
 
-export const MiIcon = styled('img')({
+export const MiIcon = styled('img')(({ theme }) => ({
   width: '75px',
   height: '75px',
   animation: `${mi_rotate} 600ms ease-out infinite`,
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '21.38px !important',
+    height: '21.38px !important',
+  }
+}))
 
-export const SmileIcon = styled('img')({
+export const SmileIcon = styled('img')(({ theme }) => ({
   width: '68px',
   height: '68px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '19.19px !important',
+    height: '19.19px !important',
+  }
+}))
 
-export const ImageShowcase = styled('div')({
+export const ImageShowcase = styled('div')(({ theme }) => ({
   position: 'relative',
   width: '1240px',
   height: '410px',
   marginTop: '55px',
   marginLeft: '100px',
   opacity: 1,
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+    height: '120px',
+    marginTop: '16px',
+    marginLeft: '18px',
+    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+}))
 
 export const ShowcaseImage = styled('img')<{ centerX: number; centerY: number, times: number, transform: string }>(
-  ({ centerX, centerY, times, transform }) => ({
+  ({ centerX, centerY, times, transform, theme }) => ({
     position: 'absolute',
     left: `${centerX}px`,
     top: `${centerY}px`,
@@ -397,7 +478,11 @@ export const ShowcaseImage = styled('img')<{ centerX: number; centerY: number, t
     transformOrigin: 'center center',    // 修改旋转中心点
     '&:hover': {
       transform: `translate(-50%, -50%) ${transform}`,  // 组合transform效果
-    }
+    },
+    [theme.breakpoints.down('sm')]: {
+      left: `${centerX*0.297}px`,
+      top: `${centerY*0.297}px`,
+    } 
   })
 )
 

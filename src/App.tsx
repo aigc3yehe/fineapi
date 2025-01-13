@@ -95,8 +95,12 @@ import GreenBackground from './assets/green_background.svg'
 import PurpleUnionIcon from './assets/purple_union.svg'
 import LineLine from './assets/lineline.svg'
 import ArrowRight from './assets/arrow-right.svg'
+import { useMediaQuery } from '@mui/material'
+import { theme } from './theme'
 
 function App() {
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const scale = isMobile ? 0.297 : 1;
   return (
     <MainLayout>
       <StyledAppBar position="static">
@@ -124,7 +128,7 @@ function App() {
         <SectionOne>
           <SectionOneContent>
             <BuildButton>
-              build on daos world
+              BUILD ON DAOS WORLD
             </BuildButton>
             <HeadlineContainer>
               <HeadlineText>
@@ -132,7 +136,7 @@ function App() {
               </HeadlineText>
               <CircleIcon src={CircleSvg} alt="circle" />
             </HeadlineContainer>
-            <HeadlineContainer gap='10px'>
+            <HeadlineContainer gap={isMobile ? '3px' : '10px'}>
               <HeadlineText>
                 framework
               </HeadlineText>
@@ -174,8 +178,8 @@ function App() {
                 centerX={160}
                 centerY={217}
                 style={{ 
-                  width: '286px', 
-                  height: '338px'
+                  width: `${286*scale}px`, 
+                  height: `${338*scale}px`
                 }}
                 times={200}
                 transform="rotate(14.45deg)"
@@ -185,7 +189,10 @@ function App() {
                 alt="showcase 2"
                 centerX={387}
                 centerY={200}
-                style={{ width: '316px', height: '407px' }}
+                style={{ 
+                  width: `${316*scale}px`, 
+                  height: `${407*scale}px`
+                }}
                 times={300}
                 transform="rotate(-12.44deg)"
               />
@@ -194,7 +201,10 @@ function App() {
                 alt="showcase 3"
                 centerX={637}
                 centerY={216}
-                style={{ width: '301px', height: '397px' }}
+                style={{ 
+                  width: `${301*scale}px`, 
+                  height: `${397*scale}px`
+                }}
                 times={300}
                 transform="rotate(8.73deg)"
               />
@@ -203,7 +213,10 @@ function App() {
                 alt="showcase 4"
                 centerX={839}
                 centerY={207}
-                style={{ width: '272px', height: '331px' }}
+                style={{ 
+                  width: `${272*scale}px`, 
+                  height: `${331*scale}px`
+                }}
                 times={300}
                 transform="rotate(-6.14deg)"
               />
@@ -212,7 +225,10 @@ function App() {
                 alt="showcase 5"
                 centerX={1072}
                 centerY={207}
-                style={{ width: '302px', height: '374px' }}
+                style={{ 
+                  width: `${302*scale}px`, 
+                  height: `${374*scale}px`
+                }}
                 times={300}
                 transform="rotate(-9.09deg)"
               />
