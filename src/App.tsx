@@ -4,6 +4,11 @@ import AIGC_DAO from './assets/AIGC_DAO.svg'
 import XIcon from './assets/x.svg'
 import DiscordIcon from './assets/discord.svg'
 import EyesIcon from '/eyes.png'
+import Features1 from './assets/features1.svg'
+import Features2 from './assets/features2.svg'
+import Features3 from './assets/features3.svg'
+import Features4 from './assets/features4.svg'
+import Features5 from './assets/features5.svg'
 import {
   MainLayout,
   ContentSection,
@@ -51,7 +56,15 @@ import {
   MisatoImage,
   RightContent,
   BoyImage,
-  GirlImage
+  GirlImage,
+  FeaturesTitle,
+  TitleLine,
+  FeaturesGrid,
+  FeatureCard,
+  FeatureIcon,
+  FeatureContent,
+  FeatureCardTitle,
+  FeatureCardText
 } from './styles/layouts'
 import CircleSvg from './assets/circle.svg'
 import RightArrow from './assets/right.svg'
@@ -322,7 +335,62 @@ function App() {
 
       <ContentSection bgColor="#1D1D1B">
         <SectionFour>
-          {/* 第四个模块的内容 */}
+          <FeaturesTitle>
+            <TitleLine>Features of</TitleLine>
+            <TitleLine left="244px" style={{ top: '92px' }}>AIGCDAO</TitleLine>
+          </FeaturesTitle>
+
+          <FeaturesGrid>
+            <FeatureCard>
+              <FeatureIcon src={Features1} alt="Breaking Data Monopolies" />
+              <FeatureContent>
+                <FeatureCardTitle>Breaking Data Monopolies agent</FeatureCardTitle>
+                <FeatureCardText>
+                  AIGC DAO offers an open-source toolchain and VAE-like technology to lower the barriers to training AI models, enabling individual developers and small teams to compete.
+                </FeatureCardText>
+              </FeatureContent>
+            </FeatureCard>
+
+            <FeatureCard>
+              <FeatureIcon src={Features2} alt="Ownership" />
+              <FeatureContent>
+                <FeatureCardTitle>Ownership and Fair Revenue Distributi</FeatureCardTitle>
+                <FeatureCardText>
+                  Through decentralized governance and the ERC-7007 standard, creators retain full ownership of their works and profit transparently in a fair trading market.
+                </FeatureCardText>
+              </FeatureContent>
+            </FeatureCard>
+
+            <FeatureCard>
+              <FeatureIcon src={Features3} alt="AIGC Assets" />
+              <FeatureContent>
+                <FeatureCardTitle>Unlocking the Potential of AIGC Assets</FeatureCardTitle>
+                <FeatureCardText>
+                  AIGC DAO integrates with the 7007 Protocol to build a decentralized market focused on AIGC assets, enabling creators to circulate and monetize their content effectively.
+                </FeatureCardText>
+              </FeatureContent>
+            </FeatureCard>
+
+            <FeatureCard>
+              <FeatureIcon src={Features4} alt="Collaboration" />
+              <FeatureContent>
+                <FeatureCardTitle>Advancing Human-Machine Collaboration</FeatureCardTitle>
+                <FeatureCardText>
+                  AIGC DAO pioneers the integration of on-chain intelligent Agents into governance systems, enhancing decision-making efficiency and exploring the future of human-machine co-governance.
+                </FeatureCardText>
+              </FeatureContent>
+            </FeatureCard>
+
+            <FeatureCard>
+              <FeatureIcon src={Features5} alt="Ecosystem" />
+              <FeatureContent>
+                <FeatureCardTitle>Building an Ecosystem of Collaboration</FeatureCardTitle>
+                <FeatureCardText>
+                  AIGC DAO collaborates with 7007 Protocol, Ora Protocol, and Hetu Protocol to create a prosperous, multi-protocol-linked ecosystem.
+                </FeatureCardText>
+              </FeatureContent>
+            </FeatureCard>
+          </FeaturesGrid>
         </SectionFour>
       </ContentSection>
 

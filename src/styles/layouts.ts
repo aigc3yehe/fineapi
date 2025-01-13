@@ -497,3 +497,91 @@ export const GirlImage = styled('img')({
   width: '385px',
   height: '471px',
 })
+
+export const FeaturesTitle = styled('div')({
+  width: '915px',
+  height: '184px',
+  position: 'relative',
+  margin: '80px 0 0 80px',
+})
+
+export const TitleLine = styled('h2')<{ left?: string }>(({ left = '0' }) => ({
+  position: 'absolute',
+  left,
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '88px',
+  fontWeight: 700,
+  lineHeight: '92px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#FFFFFF',
+  margin: 0,
+}))
+
+export const FeaturesGrid = styled('div')({
+  width: '1281px',
+  margin: '63px 0 0 80px',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(6, 1fr)',  // 将列分成6份，便于精确控制
+  gridTemplateRows: '318px 264px',
+  gap: '25px',
+  '& > *': {
+    width: '410px',  // 前三个卡片的宽度
+  },
+  '& > *:nth-of-type(1), & > *:nth-of-type(2), & > *:nth-of-type(3)': {
+    gridColumn: 'span 2',  // 前三个卡片各占2列
+  },
+  '& > *:nth-of-type(4)': {
+    gridColumn: '1 / span 3',  // 第4个卡片从第1列开始，跨越3列
+    width: '628px',
+  },
+  '& > *:nth-of-type(5)': {
+    gridColumn: '4 / span 3',  // 第5个卡片从第4列开始，跨越3列
+    width: '628px',
+  },
+})
+
+export const FeatureCard = styled('div')({
+  border: '1px solid rgba(255, 255, 255, 0.17)',
+  padding: '16px 8px 16px 16px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '32px',
+})
+
+export const FeatureIcon = styled('img')({
+  width: '96px',
+  height: '96px',
+})
+
+export const FeatureContent = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '16px',
+  flex: 1,
+})
+
+export const FeatureCardTitle = styled('h3')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '26px',
+  fontWeight: 500,
+  lineHeight: '31.2px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: '#FFFFFF',
+  margin: 0,
+})
+
+export const FeatureCardText = styled('p')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '19.2px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  color: 'rgba(255, 255, 255, 0.6)',
+  margin: 0,
+})
