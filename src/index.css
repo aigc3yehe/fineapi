@@ -64,3 +64,9 @@ body {
   min-width: 1440px;
   font-family: 'PP Neue Montreal', sans-serif;
 }
+
+@media (max-width: 768px) {
+  body {
+    min-width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 import { Button } from '@mui/material'
 import { styled, keyframes } from '@mui/material/styles'
+import { AppBar, Toolbar, Box, IconButton } from '@mui/material'
 
 // 定义旋转动画
 const rotate = keyframes`
@@ -46,28 +47,116 @@ const slideRight = keyframes`
   }
 `
 
-export const MainLayout = styled('div')({
+export const MainLayout = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
   minWidth: '1440px',
   overflow: 'hidden',
+  [theme.breakpoints.down('sm')]: {
+    minWidth: '100%',
+  }
+}))
+
+export const StyledAppBar = styled(AppBar)(({ theme }) => ({
+  width: '100%',
+  height: '90px',
+  background: '#FAF9F6',
+  boxShadow: 'none',
+  borderBottom: '1px solid #000000',
+  display: 'flex',
+  justifyContent: 'center',
+  paddingLeft: 0,
+  [theme.breakpoints.down('sm')]: {
+    height: '54px',
+  }
+}))
+
+export const AppBarToolbar = styled(Toolbar)({
+  display: 'flex',
+  justifyContent: 'space-between',
 })
 
+export const LogoContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  gap: '9px',
+  marginLeft: '16px',
+  height: '90px',
+  [theme.breakpoints.down('sm')]: {
+    height: '54px',
+    marginLeft: '0px',
+    gap: '4px',
+    '& img:first-of-type': {
+      width: '22px',
+      height: '20px',
+    },
+    '& img:last-of-type': {
+      width: '84px',
+      height: '15.5px',
+    },
+  }
+}))
+
+export const SocialButtonsContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  gap: '23px',
+  marginRight: '16px',
+  alignItems: 'center',
+  [theme.breakpoints.down('sm')]: {
+    gap: '12px',
+    marginRight: '0px',
+  }
+}))
+
+export const SocialIconButton = styled(IconButton)(({ theme }) => ({
+  width: '56px',
+  height: '56px',
+  borderRadius: '8px',
+  border: '1px solid #000000',
+  borderWidth: '1px 1px 4px 1px',
+  background: '#FAF9F6',
+  '&:hover': {
+    background: '#CDF138',
+    borderWidth: '1px',
+  },
+  '&:active': {
+    background: '#CDF138',
+    borderWidth: '1px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '31px',
+    height: '31px',
+    borderRadius: '4.5px',
+    borderWidth: '0.55px 0.55px 2.21px 0.55px',
+    '& img': {
+      width: '14px',
+      height: '14px',
+    },
+  }
+}))
+
 export const ContentSection = styled('section')<{ bgColor?: string }>(
-  ({ bgColor = '#FAF9F6' }) => ({
+  ({ bgColor = '#FAF9F6', theme }) => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     background: bgColor,
+    [theme.breakpoints.down('sm')]: {
+      width: '100vw',
+      overflow: 'hidden',
+    }
   })
 )
 
-export const ContentContainer = styled('div')({
+export const ContentContainer = styled('div')(({ theme }) => ({
   width: '1440px',
   display: 'flex',
   flexDirection: 'column',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+  }
+}))
 
 export const SectionOne = styled(ContentContainer)({
   height: '989px',
@@ -89,13 +178,18 @@ export const Footer = styled(ContentContainer)({
   height: '235px',
 })
 
-export const SectionOneContent = styled('div')({
+export const SectionOneContent = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   marginTop: '33px',
   gap: '26px',
-})
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '20px',
+    gap: '16px',
+    padding: '0 16px',
+  }
+}))
 
 export const BuildButton = styled(Button)({
   width: '304px',
@@ -127,15 +221,21 @@ export const SectionContent = styled('div')({
 })
 
 export const HeadlineContainer = styled('div')<{ gap?: string }>(
-  ({ gap = '21px' }) => ({
+  ({ gap = '21px', theme }) => ({
     display: 'flex',
     alignItems: 'center',
     height: '88px',
     gap: gap,
+    [theme.breakpoints.down('sm')]: {
+      height: 'auto',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      gap: '8px',
+    }
   })
 )
 
-export const HeadlineText = styled('h1')({
+export const HeadlineText = styled('h1')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '74px',
   fontWeight: 500,
@@ -144,7 +244,14 @@ export const HeadlineText = styled('h1')({
   textUnderlinePosition: 'from-font',
   textDecorationSkipInk: 'none',
   textTransform: 'uppercase',
-})
+  margin: 0,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '32px',
+    lineHeight: '38px',
+    width: '100%',
+    textAlign: 'center',
+  }
+}))
 
 export const CircleIcon = styled('img')({
   width: '68px',
@@ -152,11 +259,18 @@ export const CircleIcon = styled('img')({
   animation: `${rotate} 450ms ease-out infinite`,
 })
 
-export const IconGroup = styled('div')({
+export const IconGroup = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  gap: '14px',  // 可以根据实际需求调整间距
-})
+  gap: '14px',
+  [theme.breakpoints.down('sm')]: {
+    gap: '8px',
+    '& img': {
+      width: '32px !important',
+      height: '32px !important',
+    }
+  }
+}))
 
 const fadeInOut = keyframes`
   0%, 49% {
@@ -213,20 +327,28 @@ export const HeartIcon = styled('img')({
   height: '63px',
 })
 
-export const RightIcon = styled('img')({
+export const RightIcon = styled('img')(({ theme }) => ({
   width: '173px',
   height: '68px',
   animation: `${slideRight} 800ms ease-out infinite`,
   position: 'absolute',
   left: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '86px',
+    height: '34px',
+  }
+}))
 
-export const RightIconContainer = styled('div')({
+export const RightIconContainer = styled('div')(({ theme }) => ({
   width: '173px',
   height: '68px',
   overflow: 'hidden',
   position: 'relative',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '86px',
+    height: '34px',
+  }
+}))
 
 export const HeartContainer = styled('div')({
   display: 'flex',

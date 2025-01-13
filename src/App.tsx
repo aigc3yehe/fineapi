@@ -76,7 +76,12 @@ import {
   FooterRight,
   FooterButton,
   FooterButtonIcon,
-  FooterButtonText
+  FooterButtonText,
+  StyledAppBar,
+  AppBarToolbar,
+  LogoContainer,
+  SocialButtonsContainer,
+  SocialIconButton
 } from './styles/layouts'
 import CircleSvg from './assets/circle.svg'
 import RightArrow from './assets/right.svg'
@@ -94,92 +99,26 @@ import ArrowRight from './assets/arrow-right.svg'
 function App() {
   return (
     <MainLayout>
-      <AppBar 
-        position="static" 
-        sx={{
-          width: '100%',
-          height: '90px',
-          background: '#FAF9F6',
-          boxShadow: 'none',
-          borderBottom: '1px solid #000000',
-          display: 'flex',
-          justifyContent: 'center',
-          pl: 0
-        }}
-      >
-        <Toolbar
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
-          <Box 
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '9px',
-              ml: '16px',
-              height: '90px'
-            }}
-          >
-            <img src={Union} alt="Union" style={{ width: '40px', height: '36px' }} />
-            <img src={AIGC_DAO} alt="AIGC DAO" style={{ width: '151px', height: '28px' }} />
-          </Box>
+      <StyledAppBar position="static">
+        <AppBarToolbar>
+          <LogoContainer>
+            <img src={Union} alt="Union" />
+            <img src={AIGC_DAO} alt="AIGC DAO" />
+          </LogoContainer>
 
-          <Box
-            sx={{
-              display: 'flex',
-              gap: '23px',
-              mr: '16px',
-              alignItems: 'center'
-            }}
-          >
-            <IconButton
-              sx={{
-                width: '56px',
-                height: '56px',
-                borderRadius: '8px',
-                border: '1px solid #000000',
-                borderWidth: '1px 1px 4px 1px',
-                background: '#FAF9F6',
-                '&:hover': {
-                  background: '#CDF138',
-                  borderWidth: '1px',
-                },
-                '&:active': {
-                  background: '#CDF138',
-                  borderWidth: '1px',
-                }
-              }}
+          <SocialButtonsContainer>
+            <SocialIconButton
               onClick={() => window.open('https://x.com/the_AIGC_DAO', '_blank')}
             >
-              <img src={XIcon} alt="X" style={{ width: '24px', height: '24px' }} />
-            </IconButton>
+              <img src={XIcon} alt="X" />
+            </SocialIconButton>
 
-            <IconButton
-              sx={{
-                display: 'none',
-                width: '56px',
-                height: '56px',
-                borderRadius: '8px',
-                border: '1px solid #000000',
-                borderWidth: '1px 1px 4px 1px',
-                background: '#FAF9F6',
-                '&:hover': {
-                  background: '#CDF138',
-                  borderWidth: '1px',
-                },
-                '&:active': {
-                  background: '#CDF138',
-                  borderWidth: '1px',
-                }
-              }}
-            >
-              <img src={DiscordIcon} alt="Discord" style={{ width: '24px', height: '24px' }} />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
+            <SocialIconButton sx={{ display: 'none' }}>
+              <img src={DiscordIcon} alt="Discord" />
+            </SocialIconButton>
+          </SocialButtonsContainer>
+        </AppBarToolbar>
+      </StyledAppBar>
 
       <ContentSection>
         <SectionOne>
