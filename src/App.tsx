@@ -1,4 +1,3 @@
-import { AppBar, Box, Toolbar, IconButton } from '@mui/material'
 import Union from './assets/Union.svg'
 import AIGC_DAO from './assets/AIGC_DAO.svg'
 import XIcon from './assets/x.svg'
@@ -92,6 +91,7 @@ import MovieSvg from './assets/movie.svg'
 import MiSvg from './assets/mi.svg'
 import SmileSvg from './assets/smile.svg'
 import GreenBackground from './assets/green_background.svg'
+import MobileGreenBackground from './assets/mobile_green_background.svg'
 import PurpleUnionIcon from './assets/purple_union.svg'
 import LineLine from './assets/lineline.svg'
 import ArrowRight from './assets/arrow-right.svg'
@@ -240,7 +240,7 @@ function App() {
       <ContentSection bgColor="#000000">
         <SectionTwo>
           <YellowPanel>
-            <BackgroundImage src={GreenBackground} alt="green background" />
+            <BackgroundImage src={isMobile ? MobileGreenBackground : GreenBackground} alt="green background" />
             <PurpleUnion src={PurpleUnionIcon} alt="purple union" />
             
             <TextContainer>

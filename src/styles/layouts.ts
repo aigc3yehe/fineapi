@@ -169,8 +169,7 @@ export const SectionOne = styled(ContentContainer)(({ theme }) => ({
 export const SectionTwo = styled(ContentContainer)(({ theme }) => ( {
   height: '617px',
   [theme.breakpoints.down('sm')]: {
-    height: 'auto',
-    paddingBottom: '16px',
+    height: 'auto'
   }
 }))
 
@@ -486,42 +485,64 @@ export const ShowcaseImage = styled('img')<{ centerX: number; centerY: number, t
   })
 )
 
-export const YellowPanel = styled('div')({
+export const YellowPanel = styled('div')(({ theme }) => ({
   width: '1280px',
   height: '481px',
   borderRadius: '16px',
   position: 'relative',
   margin: '68px auto',
   background: '#FAF9F6',
-})
+  [theme.breakpoints.down('sm')]: {
+    width:'361px',
+    height:'452px', 
+    margin: '16px',
+    position: 'relative',
+    display: 'flex',
+    overflow: 'hidden',
+  }
+}))
 
-export const BackgroundImage = styled('img')({
+export const BackgroundImage = styled('img')(({ theme }) => ({
   width: '1280px',
   height: '481px',
   position: 'absolute',
   top: 0,
   left: 0,
   borderRadius: '16px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width:'361px',
+    height:'452px', 
+    borderRadius: '8px',
+  }
+}))
 
-export const PurpleUnion = styled('img')({
+export const PurpleUnion = styled('img')(({ theme }) => ({
   position: 'absolute',
   width: '208px',
   height: '208px',
   top: '48px',
   right: '48px',
-})
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
+  }
+}))
 
-export const TextContainer = styled('div')({
+export const TextContainer = styled('div')(({ theme }) => ( {
   position: 'absolute',
   top: '48px',
   left: '48px',
   display: 'flex',
   flexDirection: 'column',
   gap: '12px',
-})
+  [theme.breakpoints.down('sm')]: {
+    top: '24px',
+    left: '14px',
+    gap: '8px',
+    width: '320px',
+  }
+}))
 
-export const CoreTitle = styled('h2')({
+export const CoreTitle = styled('h2')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '88px',
   fontWeight: 500,
@@ -531,9 +552,13 @@ export const CoreTitle = styled('h2')({
   textDecorationSkipInk: 'none',
   color: '#000000',
   margin: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '36px',
+    lineHeight: '43.2px',
+  }
+}))
 
-export const SubTitle = styled('p')({
+export const SubTitle = styled('p')(({ theme }) => ({ 
   fontFamily: 'PP Neue Montreal',
   fontSize: '16px',
   fontWeight: 400,
@@ -543,9 +568,13 @@ export const SubTitle = styled('p')({
   textDecorationSkipInk: 'none',
   color: '#000000',
   margin: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '16px',
+    lineHeight: '19.2px',
+  }
+}))
 
-export const FeatureList = styled('div')({
+export const FeatureList = styled('div')(({ theme }) => ({
   position: 'absolute',
   top: '231px',
   left: '48px',
@@ -553,9 +582,15 @@ export const FeatureList = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   gap: '18px',
-})
+  [theme.breakpoints.down('sm')]: {
+    top: '164px',
+    left: '14px',
+    width: '332px',
+    gap: '12px',
+  }
+}))
 
-export const FeatureItem = styled('div')({
+export const FeatureItem = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'flex-start',
   gap: '8px',
@@ -573,15 +608,23 @@ export const FeatureItem = styled('div')({
     height: '4px',
     backgroundColor: '#000000',
     marginTop: '8px',  // 调整圆点的垂直位置，使其与文本对齐
+  },
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '16px',
+    lineHeight: '19.2px',
   }
-})
+}))
 
-export const SectionThreeContent = styled('div')({
+export const SectionThreeContent = styled('div')(({ theme }) => ({
   padding: '60px 80px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-})
+  [theme.breakpoints.down('sm')]: {
+    padding: '16px',
+    flexDirection: 'column',
+  }
+}))
 
 export const LeftContent = styled('div')({
   width: '583px',
