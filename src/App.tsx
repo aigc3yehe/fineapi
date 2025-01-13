@@ -37,7 +37,21 @@ import {
   CoreTitle,
   SubTitle,
   FeatureList,
-  FeatureItem
+  FeatureItem,
+  SectionThreeContent,
+  LeftContent,
+  TextGroup,
+  AgentsTitle,
+  AgentsDescription,
+  BottomSection,
+  MeetText,
+  LineImage,
+  LearnMoreGroup,
+  LearnMoreText,
+  MisatoImage,
+  RightContent,
+  BoyImage,
+  GirlImage
 } from './styles/layouts'
 import CircleSvg from './assets/circle.svg'
 import RightArrow from './assets/right.svg'
@@ -49,6 +63,8 @@ import MiSvg from './assets/mi.svg'
 import SmileSvg from './assets/smile.svg'
 import GreenBackground from './assets/green_background.svg'
 import PurpleUnionIcon from './assets/purple_union.svg'
+import LineLine from './assets/lineline.svg'
+import ArrowRight from './assets/arrow-right.svg'
 
 function App() {
   return (
@@ -276,7 +292,31 @@ function App() {
 
       <ContentSection>
         <SectionThree>
-          {/* 第三个模块的内容 */}
+          <SectionThreeContent>
+            <LeftContent>
+              <TextGroup>
+                <AgentsTitle>AIGC AGENTS</AgentsTitle>
+                <AgentsDescription>
+                  AIGC DAO isn't just a DAO for humans, it's also a creative accelerator built for AIGC agents!
+                </AgentsDescription>
+              </TextGroup>
+              
+              <BottomSection>
+                <MeetText>Meet the AIGC Agents</MeetText>
+                <LineImage src={LineLine} alt="line" />
+                <MisatoImage />
+                <LearnMoreGroup>
+                  <LearnMoreText>LEARN MORE</LearnMoreText>
+                  <img src={ArrowRight} alt="arrow right" style={{ width: '24px', height: '24px' }} />
+                </LearnMoreGroup>
+              </BottomSection>
+            </LeftContent>
+
+            <RightContent>
+              <BoyImage src="/boy.png" alt="boy" />
+              <GirlImage src="/girl.png" alt="girl" />
+            </RightContent>
+          </SectionThreeContent>
         </SectionThree>
       </ContentSection>
 

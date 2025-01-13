@@ -368,3 +368,132 @@ export const FeatureItem = styled('div')({
     marginTop: '8px',  // 调整圆点的垂直位置，使其与文本对齐
   }
 })
+
+export const SectionThreeContent = styled('div')({
+  padding: '60px 80px',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+})
+
+export const LeftContent = styled('div')({
+  width: '583px',
+  height: '523px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+})
+
+export const TextGroup = styled('div')({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '6px',
+})
+
+export const AgentsTitle = styled('h2')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '88px',
+  fontWeight: 500,
+  lineHeight: '105.6px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  margin: 0,
+})
+
+export const AgentsDescription = styled('p')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '20px',
+  fontWeight: 400,
+  lineHeight: '24px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  margin: 0,
+  width: '550px',
+})
+
+export const BottomSection = styled('div')({
+  width: '565px',
+  height: '251px',
+  position: 'relative',
+})
+
+export const MeetText = styled('p')({
+  position: 'absolute',
+  top: 0,
+  left: '311px',
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '18px',
+  fontWeight: 400,
+  lineHeight: '21.6px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+  margin: 0,
+})
+
+export const LineImage = styled('img')({
+  position: 'absolute',
+  top: '30px',
+  left: '311px',
+  width: '59px',
+  height: '82px',
+})
+
+export const LearnMoreGroup = styled('div')({
+  position: 'absolute',
+  bottom: '24px',
+  left: '311px',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '4px',
+  cursor: 'pointer',
+})
+
+export const LearnMoreText = styled('span')({
+  fontFamily: 'PP Neue Montreal',
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '19.2px',
+  textAlign: 'left',
+  textUnderlinePosition: 'from-font',
+  textDecorationSkipInk: 'none',
+})
+
+export const MisatoImage = styled('div')({
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  width: '275px',
+  height: '173px',
+  backgroundImage: 'url("/misato-gray.png")',
+  backgroundSize: 'cover',
+  transition: 'background-image 0.3s ease',
+  '&:hover': {
+    backgroundImage: 'url("/misato.png")',
+  },
+})
+
+export const RightContent = styled('div')({
+  width: '697px',
+  height: '607px',
+  position: 'relative',
+})
+
+export const BoyImage = styled('img')({
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  width: '385px',
+  height: '471px',
+})
+
+export const GirlImage = styled('img')({
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  width: '385px',
+  height: '471px',
+})
