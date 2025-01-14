@@ -122,6 +122,7 @@ function App() {
   }, [isMediumScreen]);
 
   const scale = isMobile ? 0.297 : 1;
+  const iconSize = isMobile ? '14px' : '1.5rem';
 
   return (
     <MainLayout>
@@ -136,7 +137,7 @@ function App() {
             <SocialIconButton
               onClick={() => window.open('https://x.com/the_AIGC_DAO', '_blank')}
             >
-              <img src={XIcon} alt="X" />
+              <img src={XIcon} alt="X" style={{ width: iconSize, height: iconSize }}/>
             </SocialIconButton>
 
             <SocialIconButton sx={{ display: 'none' }}>
@@ -144,7 +145,7 @@ function App() {
             </SocialIconButton>
 
             <SocialIconButton onClick={() => window.open('https://t.me/+BLtu6f2B0cowNTNl', '_blank')}>
-              <img src={TelegramIcon} alt="Telegram" />
+              <img src={TelegramIcon} alt="Telegram" style={{ width: iconSize, height: iconSize }}/>
             </SocialIconButton>
           </SocialButtonsContainer>
         </AppBarToolbar>
