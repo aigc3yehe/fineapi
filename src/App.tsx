@@ -112,7 +112,6 @@ function App() {
       } else {
         root.style.fontSize = '16px';
       }
-      console.log('Root font size:', document.documentElement.style.fontSize);
     };
 
     updateRootFontSize();
@@ -120,12 +119,6 @@ function App() {
     
     return () => window.removeEventListener('resize', updateRootFontSize);
   }, [isMediumScreen]);
-
-  console.log('Is Mobile:', isMobile);
-  console.log('Is Medium Screen:', isMediumScreen);
-  console.log('Current viewport width:', window.innerWidth);
-  console.log('SM breakpoint:', theme.breakpoints.values.sm);
-  console.log('Root font size:', document.documentElement.style.fontSize);
 
   const scale = isMobile ? 0.297 : 1;
 
@@ -317,7 +310,7 @@ function App() {
                 <MisatoImage />
                 <LearnMoreGroup>
                   <LearnMoreText>LEARN MORE</LearnMoreText>
-                  <img src={ArrowRight} alt="arrow right" style={{ width: '24px', height: '24px' }} />
+                  <img src={ArrowRight} alt="arrow right" style={{ width: '1.5rem', height: '1.5rem' }} />
                 </LearnMoreGroup>
               </BottomSection>
             </LeftContent>

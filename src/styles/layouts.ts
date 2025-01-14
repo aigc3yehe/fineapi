@@ -687,8 +687,8 @@ export const BottomSection = styled('div')(({ theme }) => ({
   position: 'relative',
   [theme.breakpoints.down('sm')]: {
     position: 'absolute',
-    top: '477px',
-    left: '14px',
+    top: '29.8125rem',
+    left: '0.875rem',
     width: '100%',
     height: 'auto',
   }
@@ -707,10 +707,10 @@ export const MeetText = styled('p')(({ theme }) => ({
   textDecorationSkipInk: 'none',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '14px',
-    lineHeight: '16.8px',
+    fontSize: '0.875rem',
+    lineHeight: '1.05rem',
     textAlign: 'right',
-    left: '220px',
+    left: '13.75rem',
   }
 }))
 
@@ -721,10 +721,10 @@ export const LineImage = styled('img')(({ theme }) => ({
   width: '3.6875rem',
   height: '5.125rem',
   [theme.breakpoints.down('sm')]: {
-    top: '26px',
-    left: '220px',
-    width: '49px',
-    height: '68px',
+    top: '1.625rem',
+    left: '13.75rem',
+    width: '3.0625rem',
+    height: '4.25rem',
   }
 }))
 
@@ -737,7 +737,7 @@ export const LearnMoreGroup = styled('div')(({ theme }) => ({
   gap: '0.25rem',
   cursor: 'pointer',
   [theme.breakpoints.down('sm')]: {
-    top: '80px',
+    top: '5rem',
     left: '0px',
   }
 }))
@@ -751,8 +751,8 @@ export const LearnMoreText = styled('span')(({ theme }) => ({
   textUnderlinePosition: 'from-font',
   textDecorationSkipInk: 'none',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '14px',
-    lineHeight: '16.8px',
+    fontSize: '0.875rem',
+    lineHeight: '1.05rem',
   }
 }))
 
@@ -769,10 +769,10 @@ export const MisatoImage = styled('div')(({ theme }) => ({
     backgroundImage: 'url("/misato.png")',
   },
   [theme.breakpoints.down('sm')]: {
-    top: '110px',
+    top: '7rem',
     left: '0px',
-    width: '234px',
-    height: '147px',
+    width: '14.625rem',
+    height: '9.1875rem',
   }
 }))
 
@@ -797,8 +797,8 @@ export const GirlImage = styled('img')(({ theme }) => ({
   height: '29.4375rem',
   [theme.breakpoints.down('sm')]: {
     position: 'absolute',
-    width: '206px',
-    height: '252px',
+    width: '12.875rem',
+    height: '15.75rem',
   }
 }))
 
@@ -809,8 +809,8 @@ export const FeaturesTitle = styled('div')(({ theme }) => ({
   margin: '5rem 0 0 5rem',
   [theme.breakpoints.down('sm')]: {
     width: 'auto',
-    height: '72px',
-    margin: '33px',
+    height: '4.5rem',
+    margin: '2.0625rem',
   }
 }))
 
@@ -827,8 +827,8 @@ export const TitleLine = styled('h2')<{ left?: string }>(({ theme, left = '0' })
   color: '#FFFFFF',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '36px',
-    lineHeight: '43.2px',
+    fontSize: '2.25rem',
+    lineHeight: '2.625rem',
   }
 }))
 
@@ -873,8 +873,8 @@ export const FeatureCard = styled('div')(({ theme }) => ({
   flexDirection: 'column',
   gap: '2rem',
   [theme.breakpoints.down('sm')]: {
-    padding: '14px',
-    gap: '24px',
+    padding: '0.875rem',
+    gap: '1.5rem',
   }
 }))
 
@@ -925,8 +925,8 @@ export const FeatureCardText = styled('p')(({ theme }) => ({
   color: 'rgba(255, 255, 255, 0.6)',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '14px',
-    lineHeight: '16.8px',
+    fontSize: '0.875rem',
+    lineHeight: '1.05rem',
   }
 }))
 
@@ -940,12 +940,12 @@ export const FooterContent = styled('div')(({ theme }) => ({
   justifyContent: 'space-between',
   alignItems: 'center',
   [theme.breakpoints.down('sm')]: {
-    width: 'calc(100% - 48px)', // 100%宽度减去左右各24px的间距
-    height: '164px',
-    margin: '46px 24px',
+    width: 'calc(100% - 3rem)', // 100%宽度减去左右各24px的间距
+    height: '10.25rem',
+    margin: '3rem 1.5rem',
     flexDirection: 'column',
     justifyContent: 'center',
-    gap: '24px',
+    gap: '1.5rem',
   }
 }))
 
@@ -958,7 +958,7 @@ export const FooterLeft = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     marginLeft: 0,
     height: 'auto',
-    gap: '16px',
+    gap: '1rem',
   }
 }))
 
@@ -982,8 +982,8 @@ export const FooterTitle = styled('h2')(({ theme }) => ({
   color: '#000000',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '32px',
-    lineHeight: '32px',
+    fontSize: '2rem',
+    lineHeight: '2rem',
   }
 }))
 
@@ -996,7 +996,7 @@ export const FooterRight = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     marginRight: 0,
     height: 'auto',
-    gap: '16px',
+    gap: '1rem',
   }
 }))
 
@@ -1040,8 +1040,8 @@ export const AgentsTitle = styled('h2')(({ theme }) => ({
   textDecorationSkipInk: 'none',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '36px',
-    lineHeight: '43.2px',
+    fontSize: '2.25rem',
+    lineHeight: '2.625rem',
   }
 }))
 
@@ -1056,7 +1056,7 @@ export const AgentsDescription = styled('p')(({ theme }) => ({
   margin: 0,
   width: '90%',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '16px',
-    lineHeight: '19.2px',
+    fontSize: '1rem',
+    lineHeight: '1.2rem',
   }
 }))
