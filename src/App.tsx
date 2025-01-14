@@ -2,6 +2,7 @@ import Union from './assets/Union.svg'
 import AIGC_DAO from './assets/AIGC_DAO.svg'
 import XIcon from './assets/x.svg'
 import DiscordIcon from './assets/discord.svg'
+import TelegramIcon from './assets/tg.svg'
 import EyesIcon from '/eyes.png'
 import Features1 from './assets/features1.svg'
 import Features2 from './assets/features2.svg'
@@ -141,6 +142,10 @@ function App() {
             <SocialIconButton sx={{ display: 'none' }}>
               <img src={DiscordIcon} alt="Discord" />
             </SocialIconButton>
+
+            <SocialIconButton onClick={() => window.open('https://t.me/+BLtu6f2B0cowNTNl', '_blank')}>
+              <img src={TelegramIcon} alt="Telegram" />
+            </SocialIconButton>
           </SocialButtonsContainer>
         </AppBarToolbar>
       </StyledAppBar>
@@ -153,7 +158,7 @@ function App() {
             </BuildButton>
             <HeadlineContainer>
               <HeadlineText>
-                The first decentralized AIGC
+                THE FIRST Agentic AIGC
               </HeadlineText>
               <CircleIcon src={CircleSvg} alt="circle" />
             </HeadlineContainer>
@@ -267,26 +272,26 @@ function App() {
             <TextContainer>
               <CoreTitle>CORE PRODUCTS</CoreTitle>
               <SubTitle>
-                Introducing innovative agent-driven AIGC solutions powered by an open-source framework designed for agents.
+               Introducing cutting-edge agent-driven AIGC solutions built for both humans and agents.
               </SubTitle>
             </TextContainer>
 
             <FeatureList>
               <FeatureItem>
                 
-                Content Generation: Supports the creation of images, text, and complex AI models+
+                Content Generation: Effortlessly create images, text, and videos with powerful, intuitive tools.
               </FeatureItem>
               <FeatureItem>
                 
-                Model Fine-Tuning: With VAE-like technology, AIGC Framework lowers the barrier to fine-tuning, giving small teams capabilities comparable to large enterprises+
+                Model Fine-Tuning: Leveraging VAE-like technology, the AIGC Framework simplifies fine-tuning, empowering small teams with capabilities rivaling those of large enterprises.
               </FeatureItem>
               <FeatureItem>
                 
-                Open-Source Toolchain: Available to community developers, fostering collaboration and innovation+
+                Open-Source Toolchain: Fully accessible to the developer community, encouraging collaboration and driving innovation.
               </FeatureItem>
               <FeatureItem>
                 
-                Seamless Trading Integration: Generated content can be directly linked to the 7007 Protocol for on-chain transactions.
+                Seamless on-chain Integration: Instantly connect generated content to the 7007 Protocol for streamlined on-chain transactions.
               </FeatureItem>
             </FeatureList>
           </YellowPanel>
@@ -334,7 +339,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features1} alt="Breaking Data Monopolies" />
               <FeatureContent>
-                <FeatureCardTitle>Breaking Data Monopolies</FeatureCardTitle>
+                <FeatureCardTitle>Ensuring Breaking Data Monopolies</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO offers an open-source toolchain and VAE-like technology to lower the barriers to training AI models, enabling individual developers and small teams to compete.
                 </FeatureCardText>
@@ -344,7 +349,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features2} alt="Ownership" />
               <FeatureContent>
-                <FeatureCardTitle>Ownership and Fair Revenue Distribution</FeatureCardTitle>
+                <FeatureCardTitle>Ensuring Ownership and Fair Revenue Distribution</FeatureCardTitle>
                 <FeatureCardText>
                   Through decentralized governance and the ERC-7007 standard, creators retain full ownership of their works and profit transparently in a fair trading market.
                 </FeatureCardText>
@@ -354,7 +359,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features3} alt="AIGC Assets" />
               <FeatureContent>
-                <FeatureCardTitle>Unlocking the Potential of AIGC Assets</FeatureCardTitle>
+                <FeatureCardTitle>Ensuring Unlocking the Potential of AIGC Assets</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO integrates with the 7007 Protocol to build a decentralized market focused on AIGC assets, enabling creators to circulate and monetize their content effectively.
                 </FeatureCardText>
@@ -364,7 +369,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features4} alt="Collaboration" />
               <FeatureContent>
-                <FeatureCardTitle>Advancing Human-Machine Collaboration</FeatureCardTitle>
+                <FeatureCardTitle>Ensuring Advancing Human-Machine Collaboration</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO pioneers the integration of on-chain intelligent Agents into governance systems, enhancing decision-making efficiency and exploring the future of human-machine co-governance.
                 </FeatureCardText>
@@ -374,7 +379,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features5} alt="Ecosystem" />
               <FeatureContent>
-                <FeatureCardTitle>Building an Ecosystem of Collaboration</FeatureCardTitle>
+                <FeatureCardTitle>Ensuring Building a Collaborative Environment</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO collaborates with 7007 Protocol, Ora Protocol, and Hetu Protocol to create a prosperous, multi-protocol-linked ecosystem.
                 </FeatureCardText>
@@ -400,6 +405,10 @@ function App() {
               <FooterButton sx={{ display: 'none' }}>
                 <FooterButtonIcon src={SmallDiscord} alt="Discord" />
                 <FooterButtonText>Discord</FooterButtonText>
+              </FooterButton>
+              <FooterButton onClick={() => window.open('https://t.me/+BLtu6f2B0cowNTNl', '_blank')}>
+                <FooterButtonIcon src={TelegramIcon} alt="Telegram" />
+                <FooterButtonText>Telegram</FooterButtonText>
               </FooterButton>
             </FooterRight>
           </FooterContent>

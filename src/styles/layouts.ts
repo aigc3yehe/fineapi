@@ -291,7 +291,6 @@ export const HeadlineText = styled('h1')(({ theme }) => ({
   textAlign: 'center',
   textUnderlinePosition: 'from-font',
   textDecorationSkipInk: 'none',
-  textTransform: 'uppercase',
   margin: 0,
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.25rem',
@@ -732,7 +731,7 @@ export const LearnMoreGroup = styled('div')(({ theme }) => ({
   position: 'absolute',
   top: '2.875rem',
   left: '0px',
-  display: 'flex',
+  display: 'none',
   alignItems: 'center',
   gap: '0.25rem',
   cursor: 'pointer',
