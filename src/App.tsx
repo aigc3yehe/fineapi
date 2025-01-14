@@ -313,7 +313,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features1} alt="Breaking Data Monopolies" />
               <FeatureContent>
-                <FeatureCardTitle>Breaking Data Monopolies agent</FeatureCardTitle>
+                <FeatureCardTitle>Breaking Data Monopolies</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO offers an open-source toolchain and VAE-like technology to lower the barriers to training AI models, enabling individual developers and small teams to compete.
                 </FeatureCardText>
@@ -323,7 +323,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features2} alt="Ownership" />
               <FeatureContent>
-                <FeatureCardTitle>Ownership and Fair Revenue Distributi</FeatureCardTitle>
+                <FeatureCardTitle>Ownership and Fair Revenue Distribution</FeatureCardTitle>
                 <FeatureCardText>
                   Through decentralized governance and the ERC-7007 standard, creators retain full ownership of their works and profit transparently in a fair trading market.
                 </FeatureCardText>
