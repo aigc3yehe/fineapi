@@ -97,10 +97,38 @@ import LineLine from './assets/lineline.svg'
 import ArrowRight from './assets/arrow-right.svg'
 import { useMediaQuery } from '@mui/material'
 import { theme } from './theme'
+import { useEffect } from 'react'
 
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMediumScreen = useMediaQuery(`@media (min-width: ${theme.breakpoints.values.sm}px) and (max-width: 1440px)`);
+  
+  useEffect(() => {
+    const updateRootFontSize = () => {
+      const root = document.documentElement;
+      if (isMediumScreen) {
+        const scale = window.innerWidth / 1440;
+        root.style.fontSize = `${16 * scale}px`;
+      } else {
+        root.style.fontSize = '16px';
+      }
+      console.log('Root font size:', document.documentElement.style.fontSize);
+    };
+
+    updateRootFontSize();
+    window.addEventListener('resize', updateRootFontSize);
+    
+    return () => window.removeEventListener('resize', updateRootFontSize);
+  }, [isMediumScreen]);
+
+  console.log('Is Mobile:', isMobile);
+  console.log('Is Medium Screen:', isMediumScreen);
+  console.log('Current viewport width:', window.innerWidth);
+  console.log('SM breakpoint:', theme.breakpoints.values.sm);
+  console.log('Root font size:', document.documentElement.style.fontSize);
+
   const scale = isMobile ? 0.297 : 1;
+
   return (
     <MainLayout>
       <StyledAppBar position="static">
@@ -136,12 +164,12 @@ function App() {
               </HeadlineText>
               <CircleIcon src={CircleSvg} alt="circle" />
             </HeadlineContainer>
-            <HeadlineContainer gap={isMobile ? '3px' : '10px'}>
+            <HeadlineContainer gap={isMobile ? '0.1875rem' : '0.625rem'}>
               <HeadlineText>
                 framework
               </HeadlineText>
               <IconGroup>
-                <img src={EyesIcon} alt="eyes" style={{ width: '74px', height: '74px' }} />
+                <img src={EyesIcon} alt="eyes" style={{ width: '4.625rem', height: '4.625rem' }} />
                 <RightIconContainer>
                   <RightIcon src={RightArrow} alt="right arrow" />
                 </RightIconContainer>
@@ -175,11 +203,11 @@ function App() {
               <ShowcaseImage 
                 src="/show/image1.png" 
                 alt="showcase 1"
-                centerX={160}
-                centerY={217}
+                centerX={`${10*scale}rem`}
+                centerY={`${13.5625*scale}rem`}
                 style={{ 
-                  width: `${286*scale}px`, 
-                  height: `${338*scale}px`
+                  width: `${17.875*scale}rem`, 
+                  height: `${21.125*scale}rem`
                 }}
                 times={200}
                 transform="rotate(14.45deg)"
@@ -187,11 +215,11 @@ function App() {
               <ShowcaseImage 
                 src="/show/image2.png" 
                 alt="showcase 2"
-                centerX={387}
-                centerY={200}
+                centerX={`${24.1875*scale}rem`}
+                centerY={`${12.5*scale}rem`}
                 style={{ 
-                  width: `${316*scale}px`, 
-                  height: `${407*scale}px`
+                  width: `${19.75*scale}rem`, 
+                  height: `${25.4375*scale}rem`
                 }}
                 times={300}
                 transform="rotate(-12.44deg)"
@@ -199,11 +227,11 @@ function App() {
               <ShowcaseImage 
                 src="/show/image3.png" 
                 alt="showcase 3"
-                centerX={637}
-                centerY={216}
+                centerX={`${39.8125*scale}rem`}
+                centerY={`${13.5*scale}rem`}
                 style={{ 
-                  width: `${301*scale}px`, 
-                  height: `${397*scale}px`
+                  width: `${18.8125*scale}rem`, 
+                  height: `${24.8125*scale}rem`
                 }}
                 times={300}
                 transform="rotate(8.73deg)"
@@ -211,11 +239,11 @@ function App() {
               <ShowcaseImage 
                 src="/show/image4.png" 
                 alt="showcase 4"
-                centerX={839}
-                centerY={207}
+                centerX={`${52.4375*scale}rem`}
+                centerY={`${12.9375*scale}rem`}
                 style={{ 
-                  width: `${272*scale}px`, 
-                  height: `${331*scale}px`
+                  width: `${17*scale}rem`, 
+                  height: `${20.6875*scale}rem`
                 }}
                 times={300}
                 transform="rotate(-6.14deg)"
@@ -223,11 +251,11 @@ function App() {
               <ShowcaseImage 
                 src="/show/image5.png" 
                 alt="showcase 5"
-                centerX={1072}
-                centerY={207}
+                centerX={`${67*scale}rem`}
+                centerY={`${12.9375*scale}rem`}
                 style={{ 
-                  width: `${302*scale}px`, 
-                  height: `${374*scale}px`
+                  width: `${18.875*scale}rem`, 
+                  height: `${23.375*scale}rem`
                 }}
                 times={300}
                 transform="rotate(-9.09deg)"
@@ -306,7 +334,7 @@ function App() {
         <SectionFour>
           <FeaturesTitle>
             <TitleLine>Features of</TitleLine>
-            <TitleLine left={isMobile ? '131px' : '244px'} style={{ top: isMobile ? '46px' : '92px' }}>AIGCDAO</TitleLine>
+            <TitleLine left={isMobile ? '8.1875rem' : '15.25rem'} style={{ top: isMobile ? '2.875rem' : '5.75rem' }}>AIGCDAO</TitleLine>
           </FeaturesTitle>
 
           <FeaturesGrid>

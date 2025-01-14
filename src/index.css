@@ -61,12 +61,23 @@ html, body, #root {
 }
 
 body {
-  min-width: 1440px;
+  min-width: 768px;
   font-family: 'PP Neue Montreal', sans-serif;
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  body {
+    min-width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 768px) {
   body {
     min-width: 100%;
   }
+}
+
+:root {
+  font-size: 16px;
 }
