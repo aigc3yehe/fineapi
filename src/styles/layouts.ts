@@ -393,8 +393,8 @@ export const AnimatedHeartOutInIcon = styled('img')<{ times: number }>(({ times=
 }))
 
 export const RightIcon = styled('img')(({ theme }) => ({
-  width: '10.8125rem',
-  height: '4.25rem',
+  width: '10.8125rem !important',
+  height: '4.25rem !important',
   animation: `${slideRight} 800ms ease-out infinite`,
   position: 'absolute',
   left: 0,
