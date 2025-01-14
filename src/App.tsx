@@ -306,7 +306,7 @@ function App() {
         <SectionFour>
           <FeaturesTitle>
             <TitleLine>Features of</TitleLine>
-            <TitleLine left="244px" style={{ top: '92px' }}>AIGCDAO</TitleLine>
+            <TitleLine left={isMobile ? '131px' : '244px'} style={{ top: isMobile ? '46px' : '92px' }}>AIGCDAO</TitleLine>
           </FeaturesTitle>
 
           <FeaturesGrid>

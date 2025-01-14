@@ -190,10 +190,11 @@ export const SectionFour = styled(ContentContainer)(({ theme }) => ({
 }))
 
 export const Footer = styled(ContentContainer)(({ theme }) => ({
+  width: '100%',
   height: '235px',
+  borderTop: '1px solid rgba(255, 255, 255, 0.24)',  // #FFFFFF3D
   [theme.breakpoints.down('sm')]: {
-    height: 'auto',
-    paddingBottom: '16px',
+    height: '256px',
   }
 }))
 
@@ -793,14 +794,19 @@ export const GirlImage = styled('img')(({ theme }) => ({
   }
 }))
 
-export const FeaturesTitle = styled('div')({
+export const FeaturesTitle = styled('div')(({ theme }) => ({
   width: '915px',
   height: '184px',
   position: 'relative',
   margin: '80px 0 0 80px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: 'auto',
+    height: '72px',
+    margin: '33px',
+  }
+}))
 
-export const TitleLine = styled('h2')<{ left?: string }>(({ left = '0' }) => ({
+export const TitleLine = styled('h2')<{ left?: string }>(({ theme, left = '0' }) => ({
   position: 'absolute',
   left,
   fontFamily: 'PP Neue Montreal',
@@ -812,52 +818,78 @@ export const TitleLine = styled('h2')<{ left?: string }>(({ left = '0' }) => ({
   textDecorationSkipInk: 'none',
   color: '#FFFFFF',
   margin: 0,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '36px',
+    lineHeight: '43.2px',
+  }
 }))
 
-export const FeaturesGrid = styled('div')({
+export const FeaturesGrid = styled('div')(({ theme }) => ({
   width: '1281px',
   margin: '63px 0 0 80px',
   display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)',  // 将列分成6份，便于精确控制
+  gridTemplateColumns: 'repeat(6, 1fr)',
   gridTemplateRows: '318px 264px',
   gap: '25px',
   '& > *': {
-    width: '410px',  // 前三个卡片的宽度
+    width: '410px',
   },
   '& > *:nth-of-type(1), & > *:nth-of-type(2), & > *:nth-of-type(3)': {
-    gridColumn: 'span 2',  // 前三个卡片各占2列
+    gridColumn: 'span 2',
   },
   '& > *:nth-of-type(4)': {
-    gridColumn: '1 / span 3',  // 第4个卡片从第1列开始，跨越3列
+    gridColumn: '1 / span 3',
     width: '628px',
   },
   '& > *:nth-of-type(5)': {
-    gridColumn: '4 / span 3',  // 第5个卡片从第4列开始，跨越3列
+    gridColumn: '4 / span 3',
     width: '628px',
   },
-})
+  [theme.breakpoints.down('sm')]: {
+    width: 'auto',
+    margin: '32px 16px 0 16px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    '& > *': {
+      width: '100% !important',
+      height: 'auto !important',
+    }
+  }
+}))
 
-export const FeatureCard = styled('div')({
+export const FeatureCard = styled('div')(({ theme }) => ({
   border: '1px solid rgba(255, 255, 255, 0.17)',
   padding: '16px 8px 16px 16px',
   display: 'flex',
   flexDirection: 'column',
   gap: '32px',
-})
+  [theme.breakpoints.down('sm')]: {
+    padding: '14px',
+    gap: '24px',
+  }
+}))
 
-export const FeatureIcon = styled('img')({
+export const FeatureIcon = styled('img')(({ theme }) => ({
   width: '96px',
   height: '96px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '84px',
+    height: '84px',
+  }
+}))
 
-export const FeatureContent = styled('div')({
+export const FeatureContent = styled('div')(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '16px',
   flex: 1,
-})
+  [theme.breakpoints.down('sm')]: {
+    gap: '14px',
+  }
+}))
 
-export const FeatureCardTitle = styled('h3')({
+export const FeatureCardTitle = styled('h3')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '26px',
   fontWeight: 500,
@@ -868,9 +900,13 @@ export const FeatureCardTitle = styled('h3')({
   color: '#FFFFFF',
   margin: 0,
   marginRight: '24px',
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '24px',
+    lineHeight: '28.8px',
+  }
+}))
 
-export const FeatureCardText = styled('p')({
+export const FeatureCardText = styled('p')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '16px',
   fontWeight: 400,
@@ -880,9 +916,13 @@ export const FeatureCardText = styled('p')({
   textDecorationSkipInk: 'none',
   color: 'rgba(255, 255, 255, 0.6)',
   margin: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '14px',
+    lineHeight: '16.8px',
+  }
+}))
 
-export const FooterContent = styled('div')({
+export const FooterContent = styled('div')(({ theme }) => ({
   width: '708px',
   height: '144px',
   borderRadius: '16px',
@@ -891,22 +931,39 @@ export const FooterContent = styled('div')({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: 'calc(100% - 48px)', // 100%宽度减去左右各24px的间距
+    height: '164px',
+    margin: '46px 24px',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: '24px',
+  }
+}))
 
-export const FooterLeft = styled('div')({
+export const FooterLeft = styled('div')(({ theme }) => ({
   height: '96px',
   marginLeft: '40px',
   display: 'flex',
   alignItems: 'center',
   gap: '24px',
-})
+  [theme.breakpoints.down('sm')]: {
+    marginLeft: 0,
+    height: 'auto',
+    gap: '16px',
+  }
+}))
 
-export const FooterLogo = styled('img')({
+export const FooterLogo = styled('img')(({ theme }) => ({
   width: '80px',
   height: '96px',
-})
+  [theme.breakpoints.down('sm')]: {
+    width: '52.86px',
+    height: '63.43px',
+  }
+}))
 
-export const FooterTitle = styled('h2')({
+export const FooterTitle = styled('h2')(({ theme }) => ({
   fontFamily: 'PP Neue Montreal',
   fontSize: '48px',
   fontWeight: 700,
@@ -916,15 +973,24 @@ export const FooterTitle = styled('h2')({
   textDecorationSkipInk: 'none',
   color: '#000000',
   margin: 0,
-})
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '32px',
+    lineHeight: '32px',
+  }
+}))
 
-export const FooterRight = styled('div')({
+export const FooterRight = styled('div')(({ theme }) => ({
   height: '32px',
   marginRight: '24px',
   display: 'flex',
   alignItems: 'center',
   gap: '16px',
-})
+  [theme.breakpoints.down('sm')]: {
+    marginRight: 0,
+    height: 'auto',
+    gap: '16px',
+  }
+}))
 
 export const FooterButton = styled('button')({
   height: '32px',
