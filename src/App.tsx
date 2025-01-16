@@ -333,14 +333,14 @@ function App() {
         <SectionFour>
           <FeaturesTitle>
             <TitleLine>Features of</TitleLine>
-            <TitleLine left={isMobile ? '8.1875rem' : '15.25rem'} style={{ top: isMobile ? '2.875rem' : '5.75rem' }}>AIGCDAO</TitleLine>
+            <TitleLine left={isMobile ? '8.1875rem' : '15.25rem'} style={{ top: isMobile ? '2.875rem' : '5.75rem' }}>AIGC DAO</TitleLine>
           </FeaturesTitle>
 
           <FeaturesGrid>
             <FeatureCard>
               <FeatureIcon src={Features1} alt="Breaking Data Monopolies" />
               <FeatureContent>
-                <FeatureCardTitle>Ensuring Breaking Data Monopolies</FeatureCardTitle>
+                <FeatureCardTitle>Breaking Data Monopolies</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO offers an open-source toolchain and VAE-like technology to lower the barriers to training AI models, enabling individual developers and small teams to compete.
                 </FeatureCardText>
@@ -360,7 +360,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features3} alt="AIGC Assets" />
               <FeatureContent>
-                <FeatureCardTitle>Ensuring Unlocking the Potential of AIGC Assets</FeatureCardTitle>
+                <FeatureCardTitle>Unlocking the Potential of AIGC Assets</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO integrates with the 7007 Protocol to build a decentralized market focused on AIGC assets, enabling creators to circulate and monetize their content effectively.
                 </FeatureCardText>
@@ -370,7 +370,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features4} alt="Collaboration" />
               <FeatureContent>
-                <FeatureCardTitle>Ensuring Advancing Human-Machine Collaboration</FeatureCardTitle>
+                <FeatureCardTitle>Advancing Human-Machine Collaboration</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO pioneers the integration of on-chain intelligent Agents into governance systems, enhancing decision-making efficiency and exploring the future of human-machine co-governance.
                 </FeatureCardText>
@@ -380,7 +380,7 @@ function App() {
             <FeatureCard>
               <FeatureIcon src={Features5} alt="Ecosystem" />
               <FeatureContent>
-                <FeatureCardTitle>Ensuring Building a Collaborative Environment</FeatureCardTitle>
+                <FeatureCardTitle>Building a Collaborative Environment</FeatureCardTitle>
                 <FeatureCardText>
                   AIGC DAO collaborates with 7007 Protocol, Ora Protocol, and Hetu Protocol to create a prosperous, multi-protocol-linked ecosystem.
                 </FeatureCardText>
